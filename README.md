@@ -10,5 +10,5 @@ Repositorio oficial del portafolio web bilingüe (Español / Inglés) de **Ezequ
 - **Sitio Web en Vivo:** [https://ezequieljaramillo.github.io](https://ezequieljaramillo.github.io)
 - **CV Ejecutivo (Español):** [`assets/cv/CV_Ezequiel_Jaramillo_AI_Data_Science_ES.pdf`](assets/cv/CV_Ezequiel_Jaramillo_AI_Data_Science_ES.pdf)
 - **Executive Resume (English):** [`assets/cv/CV_Ezequiel_Jaramillo_AI_Data_Science_EN.pdf`](assets/cv/CV_Ezequiel_Jaramillo_AI_Data_Science_EN.pdf)
-- **Contacto Directo:** [jaramilloezequiel21@gmail.com](mailto:jaramilloezequiel21@gmail.com) | [LinkedIn](https://www.linkedin.com/in/ezequiel-jaramillo-454956227)
+- **Contacto Directo:** [jaramilloezequiel2114@gmail.com](mailto:jaramilloezequiel2114@gmail.com) | [LinkedIn](https://www.linkedin.com/in/ezequiel-jaramillo-454956227)
 
