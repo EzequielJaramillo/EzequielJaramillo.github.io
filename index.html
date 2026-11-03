@@ -255,9 +255,10 @@
         }
         .profile-links {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            gap: 10px;
-            font-size: 0.84rem;
+            gap: 8px;
+            font-size: 0.82rem;
         }
         .profile-links a {
             padding: 7px 12px;
@@ -341,15 +342,18 @@
             transform: translateY(-3px);
         }
         .service-icon {
-            width: 46px;
-            height: 46px;
-            border-radius: 12px;
-            background: rgba(6, 182, 212, 0.14);
-            border: 1px solid rgba(6, 182, 212, 0.3);
+            width: 44px;
+            height: 44px;
+            border-radius: 11px;
+            background: rgba(6, 182, 212, 0.12);
+            border: 1px solid rgba(6, 182, 212, 0.32);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.35rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: 0.88rem;
+            color: #38bdf8;
             margin-bottom: 16px;
         }
         .service-card h3 {
@@ -589,7 +593,7 @@
                 <button class="lang-btn" onclick="toggleLang()" id="langToggleBtn">EN / ES</button>
                 <a href="#contacto" class="btn btn-primary">
                     <span data-lang="es">Contratar / Cotizar</span>
-                    <span data-lang="en">Hire Me / Book Call</span>
+                    <span data-lang="en">Hire Me / Contact</span>
                 </a>
             </div>
         </div>
@@ -602,7 +606,7 @@
                 <div>
                     <div class="availability-pill">
                         <span class="pulse-dot"></span>
-                        <span data-lang="es">Disponible para Proyectos Freelance, Consultoría &amp; Startups (Remoto Global)</span>
+                        <span data-lang="es">Disponible para Proyectos Freelance, Consultoria &amp; Startups (Remoto Global)</span>
                         <span data-lang="en">Available for Freelance Projects, Consulting &amp; Tech Startups (Remote Worldwide)</span>
                     </div>
                     <h1>
@@ -610,25 +614,27 @@
                         <span data-lang="en">End-to-End <span class="gradient-text">AI, Computer Vision &amp; Data Science</span> Solutions for Startups</span>
                     </h1>
                     <p class="hero-lead" data-lang="es">
-                        Soy <strong>Ezequiel Jaramillo</strong>, Ingeniero de IA, Ciencia de Datos y Visión por Computador (Becario de Maestría Científica <strong>SENACYT</strong> e Ingeniero Idóneo). Ayudo a <strong>startups tecnológicas y empresas</strong> a construir pipelines de datos masivos (<code>Apache Parquet</code>), modelos predictivos en producción (<code>PyTorch</code>, <code>YOLOv8</code>, <code>Scikit-Learn</code>) y aplicaciones interactivas (<code>Streamlit</code>, <code>Plotly</code>), respaldado por investigación publicada en <strong>MDPI Coatings</strong> y certificaciones de <strong>MIT xPRO</strong>, <strong>OpenCV University</strong> e <strong>IBM</strong>.
+                        Soy <strong>Ezequiel Jaramillo</strong>, Ingeniero de IA, Ciencia de Datos y Vision por Computador (Becario de Maestria Cientifica <strong>SENACYT</strong> e Ingeniero Idoneo). Ayudo a <strong>startups tecnologicas y empresas</strong> a construir pipelines de datos masivos (<code>Apache Parquet</code>), modelos predictivos en produccion (<code>PyTorch</code>, <code>YOLOv8</code>, <code>Scikit-Learn</code>) y aplicaciones interactivas (<code>Streamlit</code>, <code>Plotly</code>), respaldado por investigacion publicada en <strong>MDPI Coatings</strong> y certificaciones de <strong>MIT xPRO</strong>, <strong>OpenCV University</strong> e <strong>IBM</strong>.
                     </p>
                     <p class="hero-lead" data-lang="en">
                         I'm <strong>Ezequiel Jaramillo</strong>, an Applied AI, Computer Vision, and Data Science Engineer (<strong>SENACYT</strong> M.Sc. Fellow &amp; Licensed Engineer). I partner with <strong>tech startups and B2B teams</strong> to architect large-scale <code>Apache Parquet</code> Medallion pipelines, production ML/CV models (<code>PyTorch</code>, <code>YOLOv8</code>, <code>Scikit-Learn</code>), and interactive data apps (<code>Streamlit</code>, <code>Plotly</code>) — backed by peer-reviewed research in <strong>MDPI Coatings</strong> and certifications from <strong>MIT xPRO</strong>, <strong>OpenCV University</strong>, and <strong>IBM</strong>.
                     </p>
 
                     <div class="hero-cta">
-                        <a href="https://wa.me/50764757969?text=Hola%20Ezequiel,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20un%20proyecto%20de%20IA/Datos." target="_blank" class="btn btn-primary">
-                            <span data-lang="es">💬 Conversar por WhatsApp</span>
-                            <span data-lang="en">💬 Chat on WhatsApp</span>
+                        <a href="mailto:jaramilloezequiel21@gmail.com" class="btn btn-primary">
+                            <span>jaramilloezequiel21@gmail.com</span>
+                        </a>
+                        <a href="mailto:jaramilloezequiel2114@gmail.com" class="btn btn-outline">
+                            <span>jaramilloezequiel2114@gmail.com</span>
                         </a>
                         <a href="assets/cv/CV_Ezequiel_Jaramillo_AI_Data_Science_ES.pdf" target="_blank" class="btn btn-emerald">
-                            <span>📄 Descargar CV (ES)</span>
+                            <span>Descargar CV (ES PDF)</span>
                         </a>
                         <a href="assets/cv/CV_Ezequiel_Jaramillo_AI_Data_Science_EN.pdf" target="_blank" class="btn btn-outline">
-                            <span>📄 Resume (EN PDF)</span>
+                            <span>Resume (EN PDF)</span>
                         </a>
                         <a href="https://github.com/EzequielJaramillo" target="_blank" class="btn btn-outline">
-                            <span>⚡ GitHub (7 Repos)</span>
+                            <span>GitHub (7 Repos)</span>
                         </a>
                     </div>
                 </div>
@@ -651,7 +657,8 @@
                     <div class="profile-links">
                         <a href="https://github.com/EzequielJaramillo" target="_blank">GitHub</a>
                         <a href="https://www.linkedin.com/in/ezequiel-jaramillo-454956227" target="_blank">LinkedIn</a>
-                        <a href="mailto:jaramilloezequiel21@gmail.com">Email</a>
+                        <a href="mailto:jaramilloezequiel21@gmail.com">Correo 1</a>
+                        <a href="mailto:jaramilloezequiel2114@gmail.com">Correo 2</a>
                         <a href="https://doi.org/10.3390/coatings15060645" target="_blank">MDPI DOI</a>
                     </div>
                 </div>
@@ -661,22 +668,22 @@
             <div class="kpi-grid">
                 <div class="kpi-card">
                     <div class="kpi-val">6.57M+</div>
-                    <div class="kpi-label" data-lang="es">Registros procesados en Arquitectura Medallón Parquet (-80% RAM)</div>
+                    <div class="kpi-label" data-lang="es">Registros procesados en Arquitectura Medallon Parquet (-80% RAM)</div>
                     <div class="kpi-label" data-lang="en">Records processed in Apache Parquet Medallion ETL (-80% RAM)</div>
                 </div>
                 <div class="kpi-card">
                     <div class="kpi-val">99.21%</div>
-                    <div class="kpi-label" data-lang="es">mAP@0.5 en detección de objetos en tiempo real con YOLOv8 GPU</div>
+                    <div class="kpi-label" data-lang="es">mAP@0.5 en deteccion de objetos en tiempo real con YOLOv8 GPU</div>
                     <div class="kpi-label" data-lang="en">mAP@0.5 in real-time object detection with YOLOv8 on GPU</div>
                 </div>
                 <div class="kpi-card">
                     <div class="kpi-val">83x</div>
-                    <div class="kpi-label" data-lang="es">Aceleración algebraica BLAS en clasificación hiperespectral (224 bandas)</div>
+                    <div class="kpi-label" data-lang="es">Aceleracion algebraica BLAS en clasificacion hiperespectral (224 bandas)</div>
                     <div class="kpi-label" data-lang="en">BLAS matrix speedup in 224-band hyperspectral classification</div>
                 </div>
                 <div class="kpi-card">
                     <div class="kpi-val">MDPI Q2</div>
-                    <div class="kpi-label" data-lang="es">Coautor en revista científica indexada (VNIR + Deep Learning)</div>
+                    <div class="kpi-label" data-lang="es">Coautor en revista cientifica indexada (VNIR + Deep Learning)</div>
                     <div class="kpi-label" data-lang="en">Co-author in peer-reviewed journal (VNIR + Deep Learning)</div>
                 </div>
             </div>
@@ -689,18 +696,18 @@
             <div class="section-header">
                 <div class="section-eyebrow" data-lang="es">Soluciones para Startups &amp; Empresas</div>
                 <div class="section-eyebrow" data-lang="en">Solutions for Startups &amp; Enterprises</div>
-                <h2 class="section-title" data-lang="es">¿Cómo puedo acelerar tu producto tecnológico?</h2>
+                <h2 class="section-title" data-lang="es">¿Como puedo acelerar tu producto tecnologico?</h2>
                 <h2 class="section-title" data-lang="en">How I Help Startups Build &amp; Scale AI Products</h2>
-                <p class="section-desc" data-lang="es">Desarrollo modular desde el prototipo (MVP) hasta el despliegue en producción con código limpio, documentado y reproducible.</p>
+                <p class="section-desc" data-lang="es">Desarrollo modular desde el prototipo (MVP) hasta el despliegue en produccion con codigo limpio, documentado y reproducible.</p>
                 <p class="section-desc" data-lang="en">Modular delivery from rapid MVP prototyping to production deployment with clean, documented, and reproducible engineering.</p>
             </div>
 
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">👁️</div>
+                    <div class="service-icon">01</div>
                     <h3 data-lang="es">1. Computer Vision &amp; Video AI en Tiempo Real</h3>
                     <h3 data-lang="en">1. Real-Time Computer Vision &amp; Video AI</h3>
-                    <p data-lang="es">Entrenamiento a medida e inferencia de baja latencia para detección de objetos, biometría facial, segmentación cromática e inspección visual automatizada con cámaras o drones (Piloto RPA certificado).</p>
+                    <p data-lang="es">Entrenamiento a medida e inferencia de baja latencia para deteccion de objetos, biometria facial, segmentacion cromatica e inspeccion visual automatizada con camaras o drones (Piloto RPA certificado).</p>
                     <p data-lang="en">Custom training and low-latency inference for object detection, facial biometrics, color segmentation, and automated visual inspection via cameras or drones (Licensed RPA Pilot).</p>
                     <div class="tag-list">
                         <span class="tag">YOLOv8</span><span class="tag">PyTorch</span><span class="tag">OpenCV DNN</span><span class="tag">OpenFace 128-D</span><span class="tag">dlib</span><span class="tag">Scikit-Image</span>
@@ -708,10 +715,10 @@
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">⚡</div>
-                    <h3 data-lang="es">2. Ingeniería de Datos &amp; Arquitectura Medallón</h3>
+                    <div class="service-icon">02</div>
+                    <h3 data-lang="es">2. Ingenieria de Datos &amp; Arquitectura Medallon</h3>
                     <h3 data-lang="en">2. Data Engineering &amp; Medallion Pipelines</h3>
-                    <p data-lang="es">Diseño de pipelines ETL/ELT escalables (Bronce, Plata y Oro) que transforman archivos CSV/SQL crudos en particiones columnares comprimidas Apache Parquet, reduciendo costos de nube y memoria en más de un 80%.</p>
+                    <p data-lang="es">Diseno de pipelines ETL/ELT escalables (Bronce, Plata y Oro) que transforman archivos CSV/SQL crudos en particiones columnares comprimidas Apache Parquet, reduciendo costos de nube y memoria en mas de un 80%.</p>
                     <p data-lang="en">Scalable 3-tier ETL/ELT pipelines (Bronze, Silver, Gold) transforming raw CSV/SQL sources into compressed Apache Parquet partitions, cutting cloud &amp; RAM costs by over 80%.</p>
                     <div class="tag-list">
                         <span class="tag">Apache Parquet</span><span class="tag">PyArrow</span><span class="tag">Pandas</span><span class="tag">SQL</span><span class="tag">ETL Pipelines</span><span class="tag">Data Cleaning</span>
@@ -719,10 +726,10 @@
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">📈</div>
+                    <div class="service-icon">03</div>
                     <h3 data-lang="es">3. Machine Learning Predictivo &amp; Data Apps (MVPs)</h3>
                     <h3 data-lang="en">3. Predictive Machine Learning &amp; Interactive Data Apps</h3>
-                    <p data-lang="es">Modelos predictivos sin fuga de información (Gradient Boosting, clasificación calibrada, series temporales) integrados en aplicaciones web interactivas listas para clientes e inversionistas.</p>
+                    <p data-lang="es">Modelos predictivos sin fuga de informacion (Gradient Boosting, clasificacion calibrada, series temporales) integrados en aplicaciones web interactivas listas para clientes e inversionistas.</p>
                     <p data-lang="en">Zero-leakage predictive models (Gradient Boosting, calibrated classifiers, time-series) packaged into interactive web dashboards ready for clients and investors.</p>
                     <div class="tag-list">
                         <span class="tag">Scikit-Learn</span><span class="tag">HistGradientBoosting</span><span class="tag">Streamlit</span><span class="tag">Plotly</span><span class="tag">Causal ML</span>
@@ -730,10 +737,10 @@
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">🔬</div>
-                    <h3 data-lang="es">4. I+D Aplicado, Imágenes Hiperespectrales &amp; Filtrado FFT</h3>
+                    <div class="service-icon">04</div>
+                    <h3 data-lang="es">4. I+D Aplicado, Imagenes Hiperespectrales &amp; Filtrado FFT</h3>
                     <h3 data-lang="en">4. Applied R&amp;D, Hyperspectral Imaging &amp; Spectral FFT</h3>
-                    <p data-lang="es">Procesamiento avanzado de señales e imágenes científicas (cubos hiperespectrales VNIR de 224 bandas, supresión de ruido periódico 2D FFT, vectorización BLAS de alto rendimiento e integración de sensores).</p>
+                    <p data-lang="es">Procesamiento avanzado de senales e imagenes cientificas (cubos hiperespectrales VNIR de 224 bandas, supresion de ruido periodico 2D FFT, vectorizacion BLAS de alto rendimiento e integracion de sensores).</p>
                     <p data-lang="en">Advanced scientific image &amp; signal processing (224-band VNIR hyperspectral cubes, 2D FFT periodic noise suppression, high-speed BLAS vectorization, and sensor integration).</p>
                     <div class="tag-list">
                         <span class="tag">Hyperspectral VNIR</span><span class="tag">NumPy BLAS</span><span class="tag">SciPy FFT 2D</span><span class="tag">NDT Inspection</span><span class="tag">MATLAB</span>
@@ -749,9 +756,9 @@
             <div class="section-header">
                 <div class="section-eyebrow" data-lang="es">Casos de Estudio Reales en GitHub</div>
                 <div class="section-eyebrow" data-lang="en">Production Case Studies on GitHub</div>
-                <h2 class="section-title" data-lang="es">Portafolio de Proyectos e Ingeniería de Software</h2>
+                <h2 class="section-title" data-lang="es">Portafolio de Proyectos e Ingenieria de Software</h2>
                 <h2 class="section-title" data-lang="en">Featured Engineering &amp; AI Projects</h2>
-                <p class="section-desc" data-lang="es">Todos los proyectos cuentan con código fuente modular, documentación matemática y técnica paso a paso, licencias MIT y benchmarks reproducibles.</p>
+                <p class="section-desc" data-lang="es">Todos los proyectos cuentan con codigo fuente modular, documentacion matematica y tecnica paso a paso, licencias MIT y benchmarks reproducibles.</p>
                 <p class="section-desc" data-lang="en">Every repository includes modular source code, mathematical formulation, step-by-step documentation, MIT license, and reproducible benchmarks.</p>
             </div>
 
@@ -777,7 +784,7 @@
                                 <span class="metric-badge">-80% RAM (Parquet)</span>
                             </div>
                             <h3>FlightOps Analytics — Medallion ETL &amp; Air Traffic Disruption Predictor</h3>
-                            <p data-lang="es">Plataforma integral de ingeniería de datos (Arquitectura Medallón Bronce/Plata/Oro en Apache Parquet) sobre 6.57 millones de vuelos comerciales y 130,305 registros meteorológicos de EE. UU. Incluye clasificador causal sin fuga de datos (<code>HistGradientBoosting</code>, 70 variables pre-vuelo) y aplicación web interactiva con 5 módulos y simulador operativo en tiempo real.</p>
+                            <p data-lang="es">Plataforma integral de ingenieria de datos (Arquitectura Medallon Bronce/Plata/Oro en Apache Parquet) sobre 6.57 millones de vuelos comerciales y 130,305 registros meteorologicos de EE. UU. Incluye clasificador causal sin fuga de datos (<code>HistGradientBoosting</code>, 70 variables pre-vuelo) y aplicacion web interactiva con 5 modulos y simulador operativo en tiempo real.</p>
                             <p data-lang="en">End-to-end data engineering platform (Bronze/Silver/Gold Medallion Architecture in Apache Parquet) over 6.57M US flights and 130,305 weather observations. Features a zero-leakage causal classifier (<code>HistGradientBoosting</code>, 70 pre-flight variables) and a 5-module interactive Streamlit web app with a live risk simulator.</p>
                             <div class="tag-list">
                                 <span class="tag">Python 3.13</span><span class="tag">Apache Parquet</span><span class="tag">Scikit-Learn</span><span class="tag">Streamlit</span><span class="tag">Plotly</span>
@@ -803,7 +810,7 @@
                                 <span class="metric-badge">F1-Score: 0.96</span>
                             </div>
                             <h3>YOLOv8 Real-Time Traffic Light Detection &amp; State Classifier</h3>
-                            <p data-lang="es">Pipeline MLOps completo de entrenamiento en GPU (<code>YOLOv8n</code> vs <code>YOLOv8s</code>) e inferencia en video para detección de semáforos y clasificación de estado lumínico (Rojo, Amarillo, Verde, Apagado), integrado con interfaz web en Streamlit.</p>
+                            <p data-lang="es">Pipeline MLOps completo de entrenamiento en GPU (<code>YOLOv8n</code> vs <code>YOLOv8s</code>) e inferencia en video para deteccion de semaforos y clasificacion de estado luminico (Rojo, Amarillo, Verde, Apagado), integrado con interfaz web en Streamlit.</p>
                             <p data-lang="en">Complete GPU training (<code>YOLOv8n</code> vs <code>YOLOv8s</code>) and video inference pipeline for real-time traffic light detection and state classification (Red, Yellow, Green, Off), deployed with a Streamlit dashboard.</p>
                             <div class="tag-list">
                                 <span class="tag">PyTorch CUDA</span><span class="tag">YOLOv8</span><span class="tag">OpenCV</span><span class="tag">Streamlit</span>
@@ -828,7 +835,7 @@
                                 <span class="metric-badge">85.75% Accuracy</span>
                             </div>
                             <h3>Hyperspectral Euclidean Spectral Classifier (224 VNIR Bands)</h3>
-                            <p data-lang="es">Paquete modular en Python para clasificación supervisada de cubos hiperespectrales mediante expansión algebraica vectorizada en rutinas BLAS (reduciendo el tiempo de inferencia de <code>2.83 s</code> a <code>34 ms</code> en 78,000 píxeles).</p>
+                            <p data-lang="es">Paquete modular en Python para clasificacion supervisada de cubos hiperespectrales mediante expansion algebraica vectorizada en rutinas BLAS (reduciendo el tiempo de inferencia de <code>2.83 s</code> a <code>34 ms</code> en 78,000 pixeles).</p>
                             <p data-lang="en">Modular Python package for supervised hyperspectral cube classification using matrix-expanded Euclidean distance in BLAS (cutting inference time from <code>2.83 s</code> to <code>34 ms</code> across 78,000 pixels).</p>
                             <div class="tag-list">
                                 <span class="tag">Hyperspectral HSI</span><span class="tag">NumPy BLAS</span><span class="tag">SciPy</span><span class="tag">Scikit-Learn</span>
@@ -852,8 +859,8 @@
                                 <span class="metric-badge">68 Landmarks (dlib)</span>
                                 <span class="metric-badge">SSD ResNet-10</span>
                             </div>
-                            <h3>DoppelGänger Celebrity Face Recognition Engine</h3>
-                            <p data-lang="es">Sistema biométrico en dos etapas: detección neuronal profunda SSD ResNet-10, alineación geométrica afín de 68 puntos faciales (<code>dlib</code>) y búsqueda métrica 1-NN en la hiperesfera unitaria de 128 dimensiones (<code>OpenFace</code>).</p>
+                            <h3>DoppelGanger Celebrity Face Recognition Engine</h3>
+                            <p data-lang="es">Sistema biometrico en dos etapas: deteccion neuronal profunda SSD ResNet-10, alineacion geometrica afin de 68 puntos faciales (<code>dlib</code>) y busqueda metrica 1-NN en la hiperesfera unitaria de 128 dimensiones (<code>OpenFace</code>).</p>
                             <p data-lang="en">Two-stage biometric pipeline: SSD ResNet-10 deep face detection, 68-landmark affine alignment (<code>dlib</code>), and 1-NN metric matching on the 128-D unit hypersphere (<code>OpenFace</code>).</p>
                             <div class="tag-list">
                                 <span class="tag">OpenCV DNN</span><span class="tag">dlib</span><span class="tag">OpenFace</span><span class="tag">Metric Learning</span>
@@ -877,7 +884,7 @@
                                 <span class="metric-badge">2D FFT Notch Filter</span>
                             </div>
                             <h3>2D FFT Spectral Notch Filtering &amp; Histogram Restoration</h3>
-                            <p data-lang="es">Restauración de imágenes degradadas por ruido periódico unidimensional y rejillas 2D mediante diseño de máscaras Notch rechaza-banda en el dominio de Fourier y estiramiento lineal de contraste.</p>
+                            <p data-lang="es">Restauracion de imagenes degradadas por ruido periodico unidimensional y rejillas 2D mediante diseno de mascaras Notch rechaza-banda en el dominio de Fourier y estiramiento lineal de contraste.</p>
                             <p data-lang="en">Image restoration against 1D/2D periodic interference using custom 2D Fast Fourier Transform (FFT) Notch reject masks and dynamic range histogram stretching.</p>
                             <div class="tag-list">
                                 <span class="tag">2D FFT / IFFT</span><span class="tag">Spectral Filtering</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span>
@@ -901,7 +908,7 @@
                                 <span class="metric-badge">Overflow-Safe Algebra</span>
                             </div>
                             <h3>Color Spaces (RGB/CMYK) &amp; Multi-Class Chromatic Segmentation</h3>
-                            <p data-lang="es">Segmentación cromática multiclase por umbrales jerárquicos en espacios aditivos (RGB) y sustractivos (CMYK), álgebra radiométrica sin desbordamiento <code>uint8</code>, inversión espectral y fusión espacial alfa.</p>
+                            <p data-lang="es">Segmentacion cromatica multiclase por umbrales jerarquicos en espacios aditivos (RGB) y sustractivos (CMYK), algebra radiometrica sin desbordamiento <code>uint8</code>, inversion espectral y fusion espacial alfa.</p>
                             <p data-lang="en">Hierarchical multi-class color segmentation across additive (RGB) and subtractive (CMYK) spaces, overflow-safe radiometric algebra, spectral inversion, and spatial alpha blending.</p>
                             <div class="tag-list">
                                 <span class="tag">Color Segmentation</span><span class="tag">RGB / CMYK</span><span class="tag">NumPy</span><span class="tag">Image Algebra</span>
@@ -925,7 +932,7 @@
                                 <span class="metric-badge">ITU-R BT.601</span>
                             </div>
                             <h3>Digital Image Manipulation, Subsampling &amp; Uniform Quantization</h3>
-                            <p data-lang="es">Transformación radiométrica ITU-R BT.601, normalización Min-Max en punto flotante, particionamiento matricial en cuadrantes, submuestreo espacial 2x y cuantización uniforme con curvas PSNR/MSE.</p>
+                            <p data-lang="es">Transformacion radiometrica ITU-R BT.601, normalizacion Min-Max en punto flotante, particionamiento matricial en cuadrantes, submuestreo espacial 2x y cuantizacion uniforme con curvas PSNR/MSE.</p>
                             <p data-lang="en">ITU-R BT.601 luminance conversion, floating-point Min-Max normalization, quadrant matrix slicing, 2x spatial subsampling, and N-level uniform quantization with PSNR/MSE curves.</p>
                             <div class="tag-list">
                                 <span class="tag">Quantization</span><span class="tag">PSNR / MSE</span><span class="tag">Scikit-Image</span><span class="tag">NumPy</span>
@@ -944,9 +951,9 @@
     <section id="experiencia">
         <div class="container">
             <div class="section-header">
-                <div class="section-eyebrow" data-lang="es">Trayectoria &amp; Respaldo Científico</div>
+                <div class="section-eyebrow" data-lang="es">Trayectoria &amp; Respaldo Cientifico</div>
                 <div class="section-eyebrow" data-lang="en">Track Record &amp; Scientific Backing</div>
-                <h2 class="section-title" data-lang="es">Experiencia Profesional, Publicación MDPI &amp; Certificaciones</h2>
+                <h2 class="section-title" data-lang="es">Experiencia Profesional, Publicacion MDPI &amp; Certificaciones</h2>
                 <h2 class="section-title" data-lang="en">Professional Experience, Peer-Reviewed Paper &amp; Certifications</h2>
             </div>
 
@@ -954,43 +961,43 @@
                 <div>
                     <div class="timeline-item">
                         <div class="timeline-top">
-                            <span class="timeline-role" data-lang="es">Investigador en Deep Learning &amp; Visión Hiperespectral</span>
+                            <span class="timeline-role" data-lang="es">Investigador en Deep Learning &amp; Vision Hiperespectral</span>
                             <span class="timeline-role" data-lang="en">Deep Learning &amp; Hyperspectral Vision Researcher</span>
                             <span class="timeline-date">Ene 2023 – Presente</span>
                         </div>
-                        <div class="timeline-org">Grupo de Investigación GITTS — Universidad Tecnológica de Panamá</div>
+                        <div class="timeline-org">Grupo de Investigacion GITTS — Universidad Tecnologica de Panama</div>
                         <ul>
-                            <li data-lang="es">Diseño e implementación de modelos de <strong>Deep Learning</strong> y desmezcla espectral sobre cubos hiperespectrales VNIR para pruebas no destructivas (NDT) y evaluación automatizada de corrosión estructural.</li>
+                            <li data-lang="es">Diseno e implementacion de modelos de <strong>Deep Learning</strong> y desmezcla espectral sobre cubos hiperespectrales VNIR para pruebas no destructivas (NDT) y evaluacion automatizada de corrosion estructural.</li>
                             <li data-lang="en">Designed and trained <strong>Deep Learning</strong> and spectral unmixing architectures on VNIR hyperspectral cubes for automated Non-Destructive Testing (NDT) and corrosion assessment.</li>
-                            <li data-lang="es">Integración hardware-software: calibración radiométrica de sensores ópticos, diseño CAD 3D de encapsulados y manufactura CNC de PCBs.</li>
+                            <li data-lang="es">Integracion hardware-software: calibracion radiometrica de sensores opticos, diseno CAD 3D de encapsulados y manufactura CNC de PCBs.</li>
                             <li data-lang="en">Hardware-software integration: radiometric sensor calibration, custom 3D CAD enclosures, and CNC PCB manufacturing.</li>
                         </ul>
                     </div>
 
                     <div class="timeline-item">
                         <div class="timeline-top">
-                            <span class="timeline-role" data-lang="es">Desarrollador de Aplicaciones de Datos &amp; Analítica Energética</span>
+                            <span class="timeline-role" data-lang="es">Desarrollador de Aplicaciones de Datos &amp; Analitica Energetica</span>
                             <span class="timeline-role" data-lang="en">Data Applications &amp; Energy Analytics Developer</span>
                             <span class="timeline-date">Ago 2025 – Sep 2025</span>
                         </div>
-                        <div class="timeline-org">KilowattIA S.A. — Ciudad de Panamá</div>
+                        <div class="timeline-org">KilowattIA S.A. — Ciudad de Panama</div>
                         <ul>
-                            <li data-lang="es">Desarrollo de una <strong>aplicación web</strong> para automatizar formularios de censo de carga eléctrica en instalaciones comerciales e industriales.</li>
+                            <li data-lang="es">Desarrollo de una <strong>aplicacion web</strong> para automatizar formularios de censo de carga electrica en instalaciones comerciales e industriales.</li>
                             <li data-lang="en">Built a <strong>web application</strong> to digitize electrical load census collection across commercial and industrial facilities.</li>
-                            <li data-lang="es">Procesamiento de datos de consumo energético y visualización ejecutiva para identificar ahorros y optimización de cargas B2B.</li>
+                            <li data-lang="es">Procesamiento de datos de consumo energetico y visualizacion ejecutiva para identificar ahorros y optimizacion de cargas B2B.</li>
                             <li data-lang="en">Engineered energy consumption analytics pipelines and visual reports to identify B2B cost savings and load optimization.</li>
                         </ul>
                     </div>
 
                     <div class="timeline-item">
                         <div class="timeline-top">
-                            <span class="timeline-role" data-lang="es">Instructor de Laboratorio (Control, Instrumentación y Circuitos)</span>
+                            <span class="timeline-role" data-lang="es">Instructor de Laboratorio (Control, Instrumentacion y Circuitos)</span>
                             <span class="timeline-role" data-lang="en">Laboratory Instructor (Control Systems &amp; Instrumentation)</span>
                             <span class="timeline-date">Mar 2025 – Dic 2025</span>
                         </div>
-                        <div class="timeline-org">Facultad de Ingeniería Eléctrica — Universidad Tecnológica de Panamá</div>
+                        <div class="timeline-org">Facultad de Ingenieria Electrica — Universidad Tecnologica de Panama</div>
                         <ul>
-                            <li data-lang="es">Docencia práctica en sistemas de control automático, instrumentación y análisis experimental de datos eléctricos.</li>
+                            <li data-lang="es">Docencia practica en sistemas de control automatico, instrumentacion y analisis experimental de datos electricos.</li>
                             <li data-lang="en">Hands-on instruction in automatic control systems, instrumentation, and experimental data analysis.</li>
                         </ul>
                     </div>
@@ -998,26 +1005,26 @@
 
                 <div>
                     <div class="pub-card">
-                        <span class="metric-badge">PUBLICACIÓN CIENTÍFICA INDEXADA (MDPI 2025)</span>
+                        <span class="metric-badge">PUBLICACION CIENTIFICA INDEXADA (MDPI 2025)</span>
                         <h4>Automated Assessment of Marine Steel Corrosion Using Visible–Near-Infrared Hyperspectral Imaging</h4>
-                        <p data-lang="es">Coautor en la revista internacional <strong>MDPI Coatings</strong>. Aplicación de imágenes hiperespectrales VNIR y modelos de aprendizaje profundo para la cuantificación automática de corrosión marina.</p>
+                        <p data-lang="es">Coautor en la revista internacional <strong>MDPI Coatings</strong>. Aplicacion de imagenes hiperespectrales VNIR y modelos de aprendizaje profundo para la cuantificacion automatica de corrosion marina.</p>
                         <p data-lang="en">Co-author in the peer-reviewed journal <strong>MDPI Coatings</strong>. Applied VNIR hyperspectral imaging and deep learning models for automated marine steel corrosion assessment.</p>
                         <a href="https://doi.org/10.3390/coatings15060645" target="_blank" class="btn btn-primary" style="font-size:0.84rem; padding:8px 16px;">
-                            🔗 Ver Artículo en MDPI (DOI: 10.3390/coatings15060645)
+                            Ver Articulo en MDPI (DOI: 10.3390/coatings15060645)
                         </a>
                     </div>
 
                     <div class="timeline-item">
-                        <div class="timeline-role" style="margin-bottom:10px;" data-lang="es">Educación &amp; Certificaciones Internacionales</div>
+                        <div class="timeline-role" style="margin-bottom:10px;" data-lang="es">Educacion &amp; Certificaciones Internacionales</div>
                         <div class="timeline-role" style="margin-bottom:10px;" data-lang="en">Education &amp; International Certifications</div>
                         <ul>
-                            <li><strong>M.Sc. en Sostenibilidad Energética y Sistemas Ciberfísicos</strong> — UTP (Becario de Excelencia <strong>SENACYT</strong>).</li>
-                            <li><strong>Licenciatura en Ingeniería Eléctrica</strong> — Universidad Tecnológica de Panamá (2025) · <strong>Idoneidad JTIA ID 2026-013-001</strong>.</li>
+                            <li><strong>M.Sc. en Sostenibilidad Energetica y Sistemas Ciberfisicos</strong> — UTP (Becario de Excelencia <strong>SENACYT</strong>).</li>
+                            <li><strong>Licenciatura en Ingenieria Electrica</strong> — Universidad Tecnologica de Panama (2025) · <strong>Idoneidad JTIA ID 2026-013-001</strong>.</li>
                             <li><strong>MIT xPRO:</strong> Artificial Intelligence Applied to Engineering and Science.</li>
                             <li><strong>OpenCV University:</strong> Advanced Vision Applications with Deep Learning &amp; Transformers.</li>
                             <li><strong>IBM Professional Certificate:</strong> Data Science, Machine Learning with Python, SQL &amp; Data Analysis.</li>
-                            <li><strong>Licencia de Piloto de Drones (RPA Liviano):</strong> Autoridad Aeronáutica Civil (AAC) — Operaciones e inspección aérea.</li>
-                            <li><strong>Liderazgo IEEE:</strong> Vicepresidente IEEE-RAS UTP (Robótica) &amp; Secretario IEEE-ComSoc UTP.</li>
+                            <li><strong>Licencia de Piloto de Drones (RPA Liviano):</strong> Autoridad Aeronautica Civil (AAC) — Operaciones e inspeccion aerea.</li>
+                            <li><strong>Liderazgo IEEE:</strong> Vicepresidente IEEE-RAS UTP (Robotica) &amp; Secretario IEEE-ComSoc UTP.</li>
                         </ul>
                     </div>
                 </div>
@@ -1029,32 +1036,32 @@
     <section id="contacto">
         <div class="container">
             <div class="contact-box">
-                <div class="section-eyebrow" data-lang="es">¿Listo para construir tu próximo proyecto?</div>
+                <div class="section-eyebrow" data-lang="es">¿Listo para construir tu proximo proyecto?</div>
                 <div class="section-eyebrow" data-lang="en">Ready to Build Your Next AI or Data Product?</div>
                 <h2 class="section-title" data-lang="es">Hablemos sobre tu Startup o Proyecto Freelance</h2>
                 <h2 class="section-title" data-lang="en">Let's Discuss Your Startup or Freelance Project</h2>
                 <p class="section-desc" style="margin: 12px auto 0;" data-lang="es">
-                    Disponible para contratos freelance por proyecto, desarrollo de MVPs de IA/Datos, consultoría técnica y posiciones remotas en Ingeniería de Machine Learning, Computer Vision y Ciencia de Datos.
+                    Disponible para contratos freelance por proyecto, desarrollo de MVPs de IA/Datos, consultoria tecnica y posiciones remotas en Ingenieria de Machine Learning, Computer Vision y Ciencia de Datos.
                 </p>
                 <p class="section-desc" style="margin: 12px auto 0;" data-lang="en">
                     Available for project-based freelance contracts, AI/Data MVP development, technical consulting, and remote Machine Learning, Computer Vision &amp; Data Engineering roles.
                 </p>
 
                 <div class="contact-actions">
-                    <a href="https://wa.me/50764757969?text=Hola%20Ezequiel,%20vi%20tu%20portafolio%20web%20y%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto." target="_blank" class="btn btn-primary">
-                        💬 WhatsApp (+507 6475-7969)
+                    <a href="mailto:jaramilloezequiel21@gmail.com" class="btn btn-primary">
+                        jaramilloezequiel21@gmail.com
                     </a>
-                    <a href="mailto:jaramilloezequiel21@gmail.com" class="btn btn-outline">
-                        ✉️ jaramilloezequiel21@gmail.com
+                    <a href="mailto:jaramilloezequiel2114@gmail.com" class="btn btn-outline">
+                        jaramilloezequiel2114@gmail.com
                     </a>
                     <a href="https://www.linkedin.com/in/ezequiel-jaramillo-454956227" target="_blank" class="btn btn-outline">
-                        🔗 LinkedIn
+                        LinkedIn
                     </a>
                     <a href="assets/cv/CV_Ezequiel_Jaramillo_AI_Data_Science_ES.pdf" target="_blank" class="btn btn-emerald">
-                        📄 Descargar CV (ES)
+                        Descargar CV (ES PDF)
                     </a>
                     <a href="assets/cv/CV_Ezequiel_Jaramillo_AI_Data_Science_EN.pdf" target="_blank" class="btn btn-emerald">
-                        📄 Download Resume (EN)
+                        Download Resume (EN PDF)
                     </a>
                 </div>
             </div>
