@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ezequiel Jaramillo | AI, Computer Vision & Data Science Consultant</title>
+    <meta name="description" content="Portafolio de Ezequiel Jaramillo — Ingeniero de IA, Visión por Computador y Ciencia de Datos. Desarrollo de soluciones end-to-end para Startups, Machine Learning, Data Engineering y Computer Vision.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #060913;
+            --bg-secondary: #0d1326;
+            --bg-card: rgba(17, 25, 48, 0.78);
+            --bg-card-hover: rgba(24, 35, 66, 0.95);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-cyan: #06b6d4;
+            --accent-blue: #3b82f6;
+            --accent-emerald: #10b981;
+            --accent-purple: #8b5cf6;
+            --border-color: rgba(148, 163, 184, 0.14);
+            --border-hover: rgba(56, 189, 248, 0.45);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-primary);
+            background-image:
+                radial-gradient(circle at 12% 10%, rgba(59, 130, 246, 0.14), transparent 35%),
+                radial-gradient(circle at 88% 15%, rgba(6, 182, 212, 0.12), transparent 35%),
+                radial-gradient(circle at 50% 85%, rgba(16, 185, 129, 0.08), transparent 40%);
+            color: var(--text-primary);
+            line-height: 1.65;
+            overflow-x: hidden;
+        }
+        code, .mono { font-family: 'JetBrains Mono', monospace; }
+        a { color: inherit; text-decoration: none; }
+
+        .container {
+            max-width: 1220px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(16px);
+            background: rgba(6, 9, 19, 0.82);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            letter-spacing: -0.3px;
+        }
+        .brand-badge {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(6, 182, 212, 0.3);
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        .nav-links a:hover { color: #fff; }
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 7px 13px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .lang-btn:hover { border-color: var(--accent-cyan); background: rgba(6, 182, 212, 0.12); }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 11px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.92rem;
+            transition: all 0.22s ease;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            color: #fff;
+            box-shadow: 0 6px 22px rgba(6, 182, 212, 0.28);
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(6, 182, 212, 0.42); }
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: var(--border-color);
+            color: var(--text-primary);
+        }
+        .btn-outline:hover {
+            border-color: var(--accent-cyan);
+            background: rgba(6, 182, 212, 0.09);
+            transform: translateY(-2px);
+        }
+        .btn-emerald {
+            background: rgba(16, 185, 129, 0.14);
+            border-color: rgba(16, 185, 129, 0.4);
+            color: #34d399;
+        }
+        .btn-emerald:hover {
+            background: rgba(16, 185, 129, 0.24);
+            transform: translateY(-2px);
+        }
+
+        /* Hero */
+        .hero {
+            padding: 72px 0 56px;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.35fr 0.65fr;
+            gap: 44px;
+            align-items: center;
+        }
+        .availability-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: rgba(16, 185, 129, 0.12);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+            color: #34d399;
+            font-size: 0.83rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #10b981;
+            box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.2);
+        }
+        .hero h1 {
+            font-size: clamp(2.1rem, 4vw, 3.25rem);
+            font-weight: 800;
+            line-height: 1.14;
+            letter-spacing: -0.03em;
+            margin-bottom: 18px;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #38bdf8, #818cf8, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-lead {
+            font-size: 1.06rem;
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+            max-width: 680px;
+        }
+        .hero-lead strong { color: var(--text-primary); }
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        /* Profile Card */
+        .profile-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 22px;
+            padding: 28px 24px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+        }
+        .avatar-wrapper {
+            width: 156px;
+            height: 156px;
+            margin: 0 auto 16px;
+            border-radius: 50%;
+            padding: 4px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue), var(--accent-emerald));
+        }
+        .avatar-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--bg-primary);
+        }
+        .profile-name {
+            font-size: 1.22rem;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+        .profile-role {
+            font-size: 0.86rem;
+            color: #38bdf8;
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+        .cred-pills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+            margin-bottom: 18px;
+        }
+        .cred-pill {
+            font-size: 0.74rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            color: #bae6fd;
+        }
+        .profile-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            font-size: 0.84rem;
+        }
+        .profile-links a {
+            padding: 7px 12px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            transition: all 0.2s;
+        }
+        .profile-links a:hover {
+            border-color: var(--accent-cyan);
+            color: #38bdf8;
+        }
+
+        /* KPI Strip */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-top: 16px;
+        }
+        .kpi-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            transition: all 0.2s;
+        }
+        .kpi-card:hover { border-color: var(--border-hover); transform: translateY(-2px); }
+        .kpi-val {
+            font-size: 1.85rem;
+            font-weight: 800;
+            color: #38bdf8;
+            line-height: 1.15;
+            margin-bottom: 4px;
+        }
+        .kpi-label {
+            font-size: 0.84rem;
+            color: var(--text-secondary);
+        }
+
+        /* Section Generic */
+        section { padding: 68px 0; }
+        .section-header {
+            margin-bottom: 40px;
+        }
+        .section-eyebrow {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            color: var(--accent-cyan);
+            margin-bottom: 8px;
+        }
+        .section-title {
+            font-size: clamp(1.65rem, 3vw, 2.25rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        .section-desc {
+            color: var(--text-secondary);
+            max-width: 680px;
+            margin-top: 8px;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 28px;
+            transition: all 0.25s;
+        }
+        .service-card:hover {
+            border-color: var(--border-hover);
+            background: var(--bg-card-hover);
+            transform: translateY(-3px);
+        }
+        .service-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            background: rgba(6, 182, 212, 0.14);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+            margin-bottom: 16px;
+        }
+        .service-card h3 {
+            font-size: 1.18rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .service-card p {
+            color: var(--text-secondary);
+            font-size: 0.93rem;
+            margin-bottom: 16px;
+        }
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+        .tag {
+            font-size: 0.75rem;
+            font-family: 'JetBrains Mono', monospace;
+            padding: 4px 9px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: #cbd5e1;
+        }
+
+        /* Filter Tabs */
+        .filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .filter-btn {
+            padding: 8px 16px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.86rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .filter-btn.active, .filter-btn:hover {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            color: #fff;
+            border-color: transparent;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 26px;
+        }
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.25s;
+        }
+        .project-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-4px);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+        }
+        .project-card.featured {
+            grid-column: span 2;
+            display: grid;
+            grid-template-columns: 1.08fr 0.92fr;
+        }
+        .project-media {
+            position: relative;
+            background: #050811;
+            overflow: hidden;
+            min-height: 240px;
+            max-height: 330px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .project-card.featured .project-media {
+            max-height: 100%;
+        }
+        .project-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.35s ease;
+        }
+        .project-card:hover .project-media img {
+            transform: scale(1.03);
+        }
+        .project-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 1;
+        }
+        .metric-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-bottom: 12px;
+        }
+        .metric-badge {
+            font-size: 0.74rem;
+            font-weight: 700;
+            padding: 3px 9px;
+            border-radius: 6px;
+            background: rgba(16, 185, 129, 0.14);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+            color: #34d399;
+        }
+        .project-body h3 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .project-body p {
+            color: var(--text-secondary);
+            font-size: 0.91rem;
+            margin-bottom: 18px;
+        }
+        .project-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding-top: 14px;
+            border-top: 1px solid var(--border-color);
+            margin-top: auto;
+        }
+        .repo-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.86rem;
+            font-weight: 700;
+            color: #38bdf8;
+        }
+        .repo-link:hover { text-decoration: underline; }
+
+        /* Experience & Publications */
+        .exp-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 30px;
+        }
+        .timeline-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 22px;
+            margin-bottom: 18px;
+        }
+        .timeline-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 10px;
+            margin-bottom: 6px;
+        }
+        .timeline-role { font-weight: 800; font-size: 1.03rem; }
+        .timeline-date { font-size: 0.8rem; color: var(--accent-cyan); font-weight: 600; white-space: nowrap; }
+        .timeline-org { font-size: 0.88rem; color: #cbd5e1; margin-bottom: 10px; font-weight: 500; }
+        .timeline-item ul { margin-left: 18px; color: var(--text-secondary); font-size: 0.89rem; }
+        .timeline-item li { margin-bottom: 5px; }
+
+        .pub-card {
+            background: linear-gradient(135deg, rgba(14, 116, 144, 0.22), rgba(30, 58, 138, 0.24));
+            border: 1px solid rgba(56, 189, 248, 0.4);
+            border-radius: 18px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+        .pub-card h4 { font-size: 1.08rem; font-weight: 800; margin: 8px 0; }
+        .pub-card p { font-size: 0.89rem; color: var(--text-secondary); margin-bottom: 14px; }
+
+        /* Contact Footer */
+        .contact-box {
+            background: linear-gradient(135deg, rgba(13, 19, 38, 0.95), rgba(15, 23, 42, 0.95));
+            border: 1px solid var(--border-hover);
+            border-radius: 24px;
+            padding: 44px;
+            text-align: center;
+        }
+        .contact-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 26px;
+        }
+        footer {
+            padding: 32px 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border-color);
+        }
+
+        [data-lang="en"] { display: none; }
+        body.lang-en [data-lang="es"] { display: none; }
+        body.lang-en [data-lang="en"] { display: revert; }
+
+        @media (max-width: 960px) {
+            .hero-grid, .services-grid, .projects-grid, .exp-grid { grid-template-columns: 1fr; }
+            .project-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
+            .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a href="#" class="brand">
+                <div class="brand-badge">EJ</div>
+                <span>Ezequiel Jaramillo</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#servicios"><span data-lang="es">Servicios</span><span data-lang="en">Services</span></a>
+                <a href="#proyectos"><span data-lang="es">Portafolio</span><span data-lang="en">Portfolio</span></a>
+                <a href="#experiencia"><span data-lang="es">Experiencia &amp; Paper</span><span data-lang="en">Experience &amp; Paper</span></a>
+                <a href="#contacto"><span data-lang="es">Contacto</span><span data-lang="en">Contact</span></a>
+            </nav>
+            <div class="nav-actions">
+                <button class="lang-btn" onclick="toggleLang()" id="langToggleBtn">EN / ES</button>
+                <a href="#contacto" class="btn btn-primary">
+                    <span data-lang="es">Contratar / Cotizar</span>
+                    <span data-lang="en">Hire Me / Book Call</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div>
+                    <div class="availability-pill">
+                        <span class="pulse-dot"></span>
+                        <span data-lang="es">Disponible para Proyectos Freelance, Consultoría &amp; Startups (Remoto Global)</span>
+                        <span data-lang="en">Available for Freelance Projects, Consulting &amp; Tech Startups (Remote Worldwide)</span>
+                    </div>
+                    <h1>
+                        <span data-lang="es">Soluciones End-to-End de <span class="gradient-text">Inteligencia Artificial, Computer Vision &amp; Ciencia de Datos</span></span>
+                        <span data-lang="en">End-to-End <span class="gradient-text">AI, Computer Vision &amp; Data Science</span> Solutions for Startups</span>
+                    </h1>
+                    <p class="hero-lead" data-lang="es">
+                        Soy <strong>Ezequiel Jaramillo</strong>, Ingeniero de IA, Ciencia de Datos y Visión por Computador (Becario de Maestría Científica <strong>SENACYT</strong> e Ingeniero Idóneo). Ayudo a <strong>startups tecnológicas y empresas</strong> a construir pipelines de datos masivos (<code>Apache Parquet</code>), modelos predictivos en producción (<code>PyTorch</code>, <code>YOLOv8</code>, <code>Scikit-Learn</code>) y aplicaciones interactivas (<code>Streamlit</code>, <code>Plotly</code>), respaldado por investigación publicada en <strong>MDPI Coatings</strong> y certificaciones de <strong>MIT xPRO</strong>, <strong>OpenCV University</strong> e <strong>IBM</strong>.
+                    </p>
+                    <p class="hero-lead" data-lang="en">
+                        I'm <strong>Ezequiel Jaramillo</strong>, an Applied AI, Computer Vision, and Data Science Engineer (<strong>SENACYT</strong> M.Sc. Fellow &amp; Licensed Engineer). I partner with <strong>tech startups and B2B teams</strong> to architect large-scale <code>Apache Parquet</code> Medallion pipelines, production ML/CV models (<code>PyTorch</code>, <code>YOLOv8</code>, <code>Scikit-Learn</code>), and interactive data apps (<code>Streamlit</code>, <code>Plotly</code>) — backed by peer-reviewed research in <strong>MDPI Coatings</strong> and certifications from <strong>MIT xPRO</strong>, <strong>OpenCV University</strong>, and <strong>IBM</strong>.
+                    </p>
+
+                    <div class="hero-cta">
+                        <a href="https://wa.me/50764757969?text=Hola%20Ezequiel,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20un%20proyecto%20de%20IA/Datos." target="_blank" class="btn btn-primary">
+                            <span data-lang="es">💬 Conversar por WhatsApp</span>
+                            <span data-lang="en">💬 Chat on WhatsApp</span>
+                        </a>
+                        <a href="assets/cv/CV_Ezequiel_Jaramillo_AI_Data_Science_ES.pdf" target="_blank" class="btn btn-emerald">
+                            <span>📄 Descargar CV (ES)</span>
+                        </a>
+                        <a href="assets/cv/CV_Ezequiel_Jaramillo_AI_Data_Science_EN.pdf" target="_blank" class="btn btn-outline">
+                            <span>📄 Resume (EN PDF)</span>
+                        </a>
+                        <a href="https://github.com/EzequielJaramillo" target="_blank" class="btn btn-outline">
+                            <span>⚡ GitHub (7 Repos)</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Profile Card -->
+                <div class="profile-card">
+                    <div class="avatar-wrapper">
+                        <img src="assets/profile.jpg" alt="Ezequiel Jaramillo">
+                    </div>
+                    <div class="profile-name">Ezequiel Enoc Jaramillo</div>
+                    <div class="profile-role">AI, Computer Vision &amp; Data Engineer</div>
+                    <div class="cred-pills">
+                        <span class="cred-pill">MIT xPRO AI</span>
+                        <span class="cred-pill">OpenCV University</span>
+                        <span class="cred-pill">IBM Data Science</span>
+                        <span class="cred-pill">MDPI Published Author</span>
+                        <span class="cred-pill">SENACYT M.Sc. Fellow</span>
+                        <span class="cred-pill">Licensed RPA Drone Pilot</span>
+                    </div>
+                    <div class="profile-links">
+                        <a href="https://github.com/EzequielJaramillo" target="_blank">GitHub</a>
+                        <a href="https://www.linkedin.com/in/ezequiel-jaramillo-454956227" target="_blank">LinkedIn</a>
+                        <a href="mailto:jaramilloezequiel21@gmail.com">Email</a>
+                        <a href="https://doi.org/10.3390/coatings15060645" target="_blank">MDPI DOI</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KPIs -->
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-val">6.57M+</div>
+                    <div class="kpi-label" data-lang="es">Registros procesados en Arquitectura Medallón Parquet (-80% RAM)</div>
+                    <div class="kpi-label" data-lang="en">Records processed in Apache Parquet Medallion ETL (-80% RAM)</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-val">99.21%</div>
+                    <div class="kpi-label" data-lang="es">mAP@0.5 en detección de objetos en tiempo real con YOLOv8 GPU</div>
+                    <div class="kpi-label" data-lang="en">mAP@0.5 in real-time object detection with YOLOv8 on GPU</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-val">83x</div>
+                    <div class="kpi-label" data-lang="es">Aceleración algebraica BLAS en clasificación hiperespectral (224 bandas)</div>
+                    <div class="kpi-label" data-lang="en">BLAS matrix speedup in 224-band hyperspectral classification</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-val">MDPI Q2</div>
+                    <div class="kpi-label" data-lang="es">Coautor en revista científica indexada (VNIR + Deep Learning)</div>
+                    <div class="kpi-label" data-lang="en">Co-author in peer-reviewed journal (VNIR + Deep Learning)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow" data-lang="es">Soluciones para Startups &amp; Empresas</div>
+                <div class="section-eyebrow" data-lang="en">Solutions for Startups &amp; Enterprises</div>
+                <h2 class="section-title" data-lang="es">¿Cómo puedo acelerar tu producto tecnológico?</h2>
+                <h2 class="section-title" data-lang="en">How I Help Startups Build &amp; Scale AI Products</h2>
+                <p class="section-desc" data-lang="es">Desarrollo modular desde el prototipo (MVP) hasta el despliegue en producción con código limpio, documentado y reproducible.</p>
+                <p class="section-desc" data-lang="en">Modular delivery from rapid MVP prototyping to production deployment with clean, documented, and reproducible engineering.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">👁️</div>
+                    <h3 data-lang="es">1. Computer Vision &amp; Video AI en Tiempo Real</h3>
+                    <h3 data-lang="en">1. Real-Time Computer Vision &amp; Video AI</h3>
+                    <p data-lang="es">Entrenamiento a medida e inferencia de baja latencia para detección de objetos, biometría facial, segmentación cromática e inspección visual automatizada con cámaras o drones (Piloto RPA certificado).</p>
+                    <p data-lang="en">Custom training and low-latency inference for object detection, facial biometrics, color segmentation, and automated visual inspection via cameras or drones (Licensed RPA Pilot).</p>
+                    <div class="tag-list">
+                        <span class="tag">YOLOv8</span><span class="tag">PyTorch</span><span class="tag">OpenCV DNN</span><span class="tag">OpenFace 128-D</span><span class="tag">dlib</span><span class="tag">Scikit-Image</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3 data-lang="es">2. Ingeniería de Datos &amp; Arquitectura Medallón</h3>
+                    <h3 data-lang="en">2. Data Engineering &amp; Medallion Pipelines</h3>
+                    <p data-lang="es">Diseño de pipelines ETL/ELT escalables (Bronce, Plata y Oro) que transforman archivos CSV/SQL crudos en particiones columnares comprimidas Apache Parquet, reduciendo costos de nube y memoria en más de un 80%.</p>
+                    <p data-lang="en">Scalable 3-tier ETL/ELT pipelines (Bronze, Silver, Gold) transforming raw CSV/SQL sources into compressed Apache Parquet partitions, cutting cloud &amp; RAM costs by over 80%.</p>
+                    <div class="tag-list">
+                        <span class="tag">Apache Parquet</span><span class="tag">PyArrow</span><span class="tag">Pandas</span><span class="tag">SQL</span><span class="tag">ETL Pipelines</span><span class="tag">Data Cleaning</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h3 data-lang="es">3. Machine Learning Predictivo &amp; Data Apps (MVPs)</h3>
+                    <h3 data-lang="en">3. Predictive Machine Learning &amp; Interactive Data Apps</h3>
+                    <p data-lang="es">Modelos predictivos sin fuga de información (Gradient Boosting, clasificación calibrada, series temporales) integrados en aplicaciones web interactivas listas para clientes e inversionistas.</p>
+                    <p data-lang="en">Zero-leakage predictive models (Gradient Boosting, calibrated classifiers, time-series) packaged into interactive web dashboards ready for clients and investors.</p>
+                    <div class="tag-list">
+                        <span class="tag">Scikit-Learn</span><span class="tag">HistGradientBoosting</span><span class="tag">Streamlit</span><span class="tag">Plotly</span><span class="tag">Causal ML</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔬</div>
+                    <h3 data-lang="es">4. I+D Aplicado, Imágenes Hiperespectrales &amp; Filtrado FFT</h3>
+                    <h3 data-lang="en">4. Applied R&amp;D, Hyperspectral Imaging &amp; Spectral FFT</h3>
+                    <p data-lang="es">Procesamiento avanzado de señales e imágenes científicas (cubos hiperespectrales VNIR de 224 bandas, supresión de ruido periódico 2D FFT, vectorización BLAS de alto rendimiento e integración de sensores).</p>
+                    <p data-lang="en">Advanced scientific image &amp; signal processing (224-band VNIR hyperspectral cubes, 2D FFT periodic noise suppression, high-speed BLAS vectorization, and sensor integration).</p>
+                    <div class="tag-list">
+                        <span class="tag">Hyperspectral VNIR</span><span class="tag">NumPy BLAS</span><span class="tag">SciPy FFT 2D</span><span class="tag">NDT Inspection</span><span class="tag">MATLAB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="proyectos">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow" data-lang="es">Casos de Estudio Reales en GitHub</div>
+                <div class="section-eyebrow" data-lang="en">Production Case Studies on GitHub</div>
+                <h2 class="section-title" data-lang="es">Portafolio de Proyectos e Ingeniería de Software</h2>
+                <h2 class="section-title" data-lang="en">Featured Engineering &amp; AI Projects</h2>
+                <p class="section-desc" data-lang="es">Todos los proyectos cuentan con código fuente modular, documentación matemática y técnica paso a paso, licencias MIT y benchmarks reproducibles.</p>
+                <p class="section-desc" data-lang="en">Every repository includes modular source code, mathematical formulation, step-by-step documentation, MIT license, and reproducible benchmarks.</p>
+            </div>
+
+            <div class="filter-bar">
+                <button class="filter-btn active" onclick="filterProjects('all', this)">Todos / All (7)</button>
+                <button class="filter-btn" onclick="filterProjects('data-ml', this)">Data Engineering &amp; ML</button>
+                <button class="filter-btn" onclick="filterProjects('cv-dl', this)">Computer Vision &amp; Deep Learning</button>
+                <button class="filter-btn" onclick="filterProjects('dip-hsi', this)">Hyperspectral &amp; Image Processing</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1: FlightOps (Featured) -->
+                <article class="project-card featured" data-category="data-ml">
+                    <div class="project-media">
+                        <img src="assets/projects/flightops_dashboard.png" alt="FlightOps Analytics Platform">
+                    </div>
+                    <div class="project-body">
+                        <div>
+                            <div class="metric-badges">
+                                <span class="metric-badge">6,573,267 Flights</span>
+                                <span class="metric-badge">ROC-AUC 0.7898</span>
+                                <span class="metric-badge">85.2% Precision</span>
+                                <span class="metric-badge">-80% RAM (Parquet)</span>
+                            </div>
+                            <h3>FlightOps Analytics — Medallion ETL &amp; Air Traffic Disruption Predictor</h3>
+                            <p data-lang="es">Plataforma integral de ingeniería de datos (Arquitectura Medallón Bronce/Plata/Oro en Apache Parquet) sobre 6.57 millones de vuelos comerciales y 130,305 registros meteorológicos de EE. UU. Incluye clasificador causal sin fuga de datos (<code>HistGradientBoosting</code>, 70 variables pre-vuelo) y aplicación web interactiva con 5 módulos y simulador operativo en tiempo real.</p>
+                            <p data-lang="en">End-to-end data engineering platform (Bronze/Silver/Gold Medallion Architecture in Apache Parquet) over 6.57M US flights and 130,305 weather observations. Features a zero-leakage causal classifier (<code>HistGradientBoosting</code>, 70 pre-flight variables) and a 5-module interactive Streamlit web app with a live risk simulator.</p>
+                            <div class="tag-list">
+                                <span class="tag">Python 3.13</span><span class="tag">Apache Parquet</span><span class="tag">Scikit-Learn</span><span class="tag">Streamlit</span><span class="tag">Plotly</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/EzequielJaramillo/flightops-air-traffic-analytics" target="_blank" class="repo-link">Ver Repositorio en GitHub &rarr;</a>
+                            <a href="assets/projects/flightops_simulator.png" target="_blank" class="tag">Ver Simulador ML</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: YOLOv8 Traffic Light -->
+                <article class="project-card" data-category="cv-dl">
+                    <div class="project-media">
+                        <img src="assets/projects/yolov8_traffic.gif" alt="YOLOv8 Traffic Light Detection">
+                    </div>
+                    <div class="project-body">
+                        <div>
+                            <div class="metric-badges">
+                                <span class="metric-badge">mAP@0.5: 99.21%</span>
+                                <span class="metric-badge">mAP@0.5:0.95: 79.13%</span>
+                                <span class="metric-badge">F1-Score: 0.96</span>
+                            </div>
+                            <h3>YOLOv8 Real-Time Traffic Light Detection &amp; State Classifier</h3>
+                            <p data-lang="es">Pipeline MLOps completo de entrenamiento en GPU (<code>YOLOv8n</code> vs <code>YOLOv8s</code>) e inferencia en video para detección de semáforos y clasificación de estado lumínico (Rojo, Amarillo, Verde, Apagado), integrado con interfaz web en Streamlit.</p>
+                            <p data-lang="en">Complete GPU training (<code>YOLOv8n</code> vs <code>YOLOv8s</code>) and video inference pipeline for real-time traffic light detection and state classification (Red, Yellow, Green, Off), deployed with a Streamlit dashboard.</p>
+                            <div class="tag-list">
+                                <span class="tag">PyTorch CUDA</span><span class="tag">YOLOv8</span><span class="tag">OpenCV</span><span class="tag">Streamlit</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/EzequielJaramillo/yolov8-traffic-light-detection" target="_blank" class="repo-link">Ver Repositorio en GitHub &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: Hyperspectral Classifier -->
+                <article class="project-card" data-category="dip-hsi data-ml">
+                    <div class="project-media">
+                        <img src="assets/projects/hsi_classifier.png" alt="Hyperspectral Euclidean Classifier">
+                    </div>
+                    <div class="project-body">
+                        <div>
+                            <div class="metric-badges">
+                                <span class="metric-badge">83x BLAS Speedup</span>
+                                <span class="metric-badge">224 Spectral Bands</span>
+                                <span class="metric-badge">85.75% Accuracy</span>
+                            </div>
+                            <h3>Hyperspectral Euclidean Spectral Classifier (224 VNIR Bands)</h3>
+                            <p data-lang="es">Paquete modular en Python para clasificación supervisada de cubos hiperespectrales mediante expansión algebraica vectorizada en rutinas BLAS (reduciendo el tiempo de inferencia de <code>2.83 s</code> a <code>34 ms</code> en 78,000 píxeles).</p>
+                            <p data-lang="en">Modular Python package for supervised hyperspectral cube classification using matrix-expanded Euclidean distance in BLAS (cutting inference time from <code>2.83 s</code> to <code>34 ms</code> across 78,000 pixels).</p>
+                            <div class="tag-list">
+                                <span class="tag">Hyperspectral HSI</span><span class="tag">NumPy BLAS</span><span class="tag">SciPy</span><span class="tag">Scikit-Learn</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/EzequielJaramillo/hyperspectral-euclidean-spectral-classifier" target="_blank" class="repo-link">Ver Repositorio en GitHub &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: DoppelGanger Face Matcher -->
+                <article class="project-card" data-category="cv-dl">
+                    <div class="project-media">
+                        <img src="assets/projects/doppelganger_match.png" alt="DoppelGanger Face Recognition">
+                    </div>
+                    <div class="project-body">
+                        <div>
+                            <div class="metric-badges">
+                                <span class="metric-badge">OpenFace 128-D</span>
+                                <span class="metric-badge">68 Landmarks (dlib)</span>
+                                <span class="metric-badge">SSD ResNet-10</span>
+                            </div>
+                            <h3>DoppelGänger Celebrity Face Recognition Engine</h3>
+                            <p data-lang="es">Sistema biométrico en dos etapas: detección neuronal profunda SSD ResNet-10, alineación geométrica afín de 68 puntos faciales (<code>dlib</code>) y búsqueda métrica 1-NN en la hiperesfera unitaria de 128 dimensiones (<code>OpenFace</code>).</p>
+                            <p data-lang="en">Two-stage biometric pipeline: SSD ResNet-10 deep face detection, 68-landmark affine alignment (<code>dlib</code>), and 1-NN metric matching on the 128-D unit hypersphere (<code>OpenFace</code>).</p>
+                            <div class="tag-list">
+                                <span class="tag">OpenCV DNN</span><span class="tag">dlib</span><span class="tag">OpenFace</span><span class="tag">Metric Learning</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/EzequielJaramillo/doppelganger-celebrity-face-matcher" target="_blank" class="repo-link">Ver Repositorio en GitHub &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5: FFT & Spatial Filtering -->
+                <article class="project-card" data-category="dip-hsi">
+                    <div class="project-media">
+                        <img src="assets/projects/fft_notch_filtering.png" alt="2D FFT Notch Filtering">
+                    </div>
+                    <div class="project-body">
+                        <div>
+                            <div class="metric-badges">
+                                <span class="metric-badge">4.15x Noise Reduction</span>
+                                <span class="metric-badge">2D FFT Notch Filter</span>
+                            </div>
+                            <h3>2D FFT Spectral Notch Filtering &amp; Histogram Restoration</h3>
+                            <p data-lang="es">Restauración de imágenes degradadas por ruido periódico unidimensional y rejillas 2D mediante diseño de máscaras Notch rechaza-banda en el dominio de Fourier y estiramiento lineal de contraste.</p>
+                            <p data-lang="en">Image restoration against 1D/2D periodic interference using custom 2D Fast Fourier Transform (FFT) Notch reject masks and dynamic range histogram stretching.</p>
+                            <div class="tag-list">
+                                <span class="tag">2D FFT / IFFT</span><span class="tag">Spectral Filtering</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/EzequielJaramillo/histogram-and-frequency-spatial-filtering" target="_blank" class="repo-link">Ver Repositorio en GitHub &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 6: Color Spaces & Segmentation -->
+                <article class="project-card" data-category="dip-hsi cv-dl">
+                    <div class="project-media">
+                        <img src="assets/projects/color_segmentation.png" alt="RGB & CMYK Color Segmentation">
+                    </div>
+                    <div class="project-body">
+                        <div>
+                            <div class="metric-badges">
+                                <span class="metric-badge">RGBW &amp; CMYKW</span>
+                                <span class="metric-badge">Overflow-Safe Algebra</span>
+                            </div>
+                            <h3>Color Spaces (RGB/CMYK) &amp; Multi-Class Chromatic Segmentation</h3>
+                            <p data-lang="es">Segmentación cromática multiclase por umbrales jerárquicos en espacios aditivos (RGB) y sustractivos (CMYK), álgebra radiométrica sin desbordamiento <code>uint8</code>, inversión espectral y fusión espacial alfa.</p>
+                            <p data-lang="en">Hierarchical multi-class color segmentation across additive (RGB) and subtractive (CMYK) spaces, overflow-safe radiometric algebra, spectral inversion, and spatial alpha blending.</p>
+                            <div class="tag-list">
+                                <span class="tag">Color Segmentation</span><span class="tag">RGB / CMYK</span><span class="tag">NumPy</span><span class="tag">Image Algebra</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/EzequielJaramillo/color-spaces-and-image-segmentation" target="_blank" class="repo-link">Ver Repositorio en GitHub &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 7: Image Manipulation & Quantization -->
+                <article class="project-card" data-category="dip-hsi">
+                    <div class="project-media">
+                        <img src="assets/projects/image_quantization.png" alt="Digital Image Quantization & PSNR">
+                    </div>
+                    <div class="project-body">
+                        <div>
+                            <div class="metric-badges">
+                                <span class="metric-badge">+22.84 dB PSNR Gain</span>
+                                <span class="metric-badge">ITU-R BT.601</span>
+                            </div>
+                            <h3>Digital Image Manipulation, Subsampling &amp; Uniform Quantization</h3>
+                            <p data-lang="es">Transformación radiométrica ITU-R BT.601, normalización Min-Max en punto flotante, particionamiento matricial en cuadrantes, submuestreo espacial 2x y cuantización uniforme con curvas PSNR/MSE.</p>
+                            <p data-lang="en">ITU-R BT.601 luminance conversion, floating-point Min-Max normalization, quadrant matrix slicing, 2x spatial subsampling, and N-level uniform quantization with PSNR/MSE curves.</p>
+                            <div class="tag-list">
+                                <span class="tag">Quantization</span><span class="tag">PSNR / MSE</span><span class="tag">Scikit-Image</span><span class="tag">NumPy</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/EzequielJaramillo/digital-image-manipulation-fundamentals" target="_blank" class="repo-link">Ver Repositorio en GitHub &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience, Publication & Credentials -->
+    <section id="experiencia">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow" data-lang="es">Trayectoria &amp; Respaldo Científico</div>
+                <div class="section-eyebrow" data-lang="en">Track Record &amp; Scientific Backing</div>
+                <h2 class="section-title" data-lang="es">Experiencia Profesional, Publicación MDPI &amp; Certificaciones</h2>
+                <h2 class="section-title" data-lang="en">Professional Experience, Peer-Reviewed Paper &amp; Certifications</h2>
+            </div>
+
+            <div class="exp-grid">
+                <div>
+                    <div class="timeline-item">
+                        <div class="timeline-top">
+                            <span class="timeline-role" data-lang="es">Investigador en Deep Learning &amp; Visión Hiperespectral</span>
+                            <span class="timeline-role" data-lang="en">Deep Learning &amp; Hyperspectral Vision Researcher</span>
+                            <span class="timeline-date">Ene 2023 – Presente</span>
+                        </div>
+                        <div class="timeline-org">Grupo de Investigación GITTS — Universidad Tecnológica de Panamá</div>
+                        <ul>
+                            <li data-lang="es">Diseño e implementación de modelos de <strong>Deep Learning</strong> y desmezcla espectral sobre cubos hiperespectrales VNIR para pruebas no destructivas (NDT) y evaluación automatizada de corrosión estructural.</li>
+                            <li data-lang="en">Designed and trained <strong>Deep Learning</strong> and spectral unmixing architectures on VNIR hyperspectral cubes for automated Non-Destructive Testing (NDT) and corrosion assessment.</li>
+                            <li data-lang="es">Integración hardware-software: calibración radiométrica de sensores ópticos, diseño CAD 3D de encapsulados y manufactura CNC de PCBs.</li>
+                            <li data-lang="en">Hardware-software integration: radiometric sensor calibration, custom 3D CAD enclosures, and CNC PCB manufacturing.</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-top">
+                            <span class="timeline-role" data-lang="es">Desarrollador de Aplicaciones de Datos &amp; Analítica Energética</span>
+                            <span class="timeline-role" data-lang="en">Data Applications &amp; Energy Analytics Developer</span>
+                            <span class="timeline-date">Ago 2025 – Sep 2025</span>
+                        </div>
+                        <div class="timeline-org">KilowattIA S.A. — Ciudad de Panamá</div>
+                        <ul>
+                            <li data-lang="es">Desarrollo de una <strong>aplicación web</strong> para automatizar formularios de censo de carga eléctrica en instalaciones comerciales e industriales.</li>
+                            <li data-lang="en">Built a <strong>web application</strong> to digitize electrical load census collection across commercial and industrial facilities.</li>
+                            <li data-lang="es">Procesamiento de datos de consumo energético y visualización ejecutiva para identificar ahorros y optimización de cargas B2B.</li>
+                            <li data-lang="en">Engineered energy consumption analytics pipelines and visual reports to identify B2B cost savings and load optimization.</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-top">
+                            <span class="timeline-role" data-lang="es">Instructor de Laboratorio (Control, Instrumentación y Circuitos)</span>
+                            <span class="timeline-role" data-lang="en">Laboratory Instructor (Control Systems &amp; Instrumentation)</span>
+                            <span class="timeline-date">Mar 2025 – Dic 2025</span>
+                        </div>
+                        <div class="timeline-org">Facultad de Ingeniería Eléctrica — Universidad Tecnológica de Panamá</div>
+                        <ul>
+                            <li data-lang="es">Docencia práctica en sistemas de control automático, instrumentación y análisis experimental de datos eléctricos.</li>
+                            <li data-lang="en">Hands-on instruction in automatic control systems, instrumentation, and experimental data analysis.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="pub-card">
+                        <span class="metric-badge">PUBLICACIÓN CIENTÍFICA INDEXADA (MDPI 2025)</span>
+                        <h4>Automated Assessment of Marine Steel Corrosion Using Visible–Near-Infrared Hyperspectral Imaging</h4>
+                        <p data-lang="es">Coautor en la revista internacional <strong>MDPI Coatings</strong>. Aplicación de imágenes hiperespectrales VNIR y modelos de aprendizaje profundo para la cuantificación automática de corrosión marina.</p>
+                        <p data-lang="en">Co-author in the peer-reviewed journal <strong>MDPI Coatings</strong>. Applied VNIR hyperspectral imaging and deep learning models for automated marine steel corrosion assessment.</p>
+                        <a href="https://doi.org/10.3390/coatings15060645" target="_blank" class="btn btn-primary" style="font-size:0.84rem; padding:8px 16px;">
+                            🔗 Ver Artículo en MDPI (DOI: 10.3390/coatings15060645)
+                        </a>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-role" style="margin-bottom:10px;" data-lang="es">Educación &amp; Certificaciones Internacionales</div>
+                        <div class="timeline-role" style="margin-bottom:10px;" data-lang="en">Education &amp; International Certifications</div>
+                        <ul>
+                            <li><strong>M.Sc. en Sostenibilidad Energética y Sistemas Ciberfísicos</strong> — UTP (Becario de Excelencia <strong>SENACYT</strong>).</li>
+                            <li><strong>Licenciatura en Ingeniería Eléctrica</strong> — Universidad Tecnológica de Panamá (2025) · <strong>Idoneidad JTIA ID 2026-013-001</strong>.</li>
+                            <li><strong>MIT xPRO:</strong> Artificial Intelligence Applied to Engineering and Science.</li>
+                            <li><strong>OpenCV University:</strong> Advanced Vision Applications with Deep Learning &amp; Transformers.</li>
+                            <li><strong>IBM Professional Certificate:</strong> Data Science, Machine Learning with Python, SQL &amp; Data Analysis.</li>
+                            <li><strong>Licencia de Piloto de Drones (RPA Liviano):</strong> Autoridad Aeronáutica Civil (AAC) — Operaciones e inspección aérea.</li>
+                            <li><strong>Liderazgo IEEE:</strong> Vicepresidente IEEE-RAS UTP (Robótica) &amp; Secretario IEEE-ComSoc UTP.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto">
+        <div class="container">
+            <div class="contact-box">
+                <div class="section-eyebrow" data-lang="es">¿Listo para construir tu próximo proyecto?</div>
+                <div class="section-eyebrow" data-lang="en">Ready to Build Your Next AI or Data Product?</div>
+                <h2 class="section-title" data-lang="es">Hablemos sobre tu Startup o Proyecto Freelance</h2>
+                <h2 class="section-title" data-lang="en">Let's Discuss Your Startup or Freelance Project</h2>
+                <p class="section-desc" style="margin: 12px auto 0;" data-lang="es">
+                    Disponible para contratos freelance por proyecto, desarrollo de MVPs de IA/Datos, consultoría técnica y posiciones remotas en Ingeniería de Machine Learning, Computer Vision y Ciencia de Datos.
+                </p>
+                <p class="section-desc" style="margin: 12px auto 0;" data-lang="en">
+                    Available for project-based freelance contracts, AI/Data MVP development, technical consulting, and remote Machine Learning, Computer Vision &amp; Data Engineering roles.
+                </p>
+
+                <div class="contact-actions">
+                    <a href="https://wa.me/50764757969?text=Hola%20Ezequiel,%20vi%20tu%20portafolio%20web%20y%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto." target="_blank" class="btn btn-primary">
+                        💬 WhatsApp (+507 6475-7969)
+                    </a>
+                    <a href="mailto:jaramilloezequiel21@gmail.com" class="btn btn-outline">
+                        ✉️ jaramilloezequiel21@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/ezequiel-jaramillo-454956227" target="_blank" class="btn btn-outline">
+                        🔗 LinkedIn
+                    </a>
+                    <a href="assets/cv/CV_Ezequiel_Jaramillo_AI_Data_Science_ES.pdf" target="_blank" class="btn btn-emerald">
+                        📄 Descargar CV (ES)
+                    </a>
+                    <a href="assets/cv/CV_Ezequiel_Jaramillo_AI_Data_Science_EN.pdf" target="_blank" class="btn btn-emerald">
+                        📄 Download Resume (EN)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            &copy; 2026 Ezequiel Enoc Jaramillo Andrade &bull; AI, Computer Vision &amp; Data Science Engineer &bull;
+            <a href="https://github.com/EzequielJaramillo" style="color:#38bdf8;">github.com/EzequielJaramillo</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleLang() {
+            document.body.classList.toggle('lang-en');
+        }
+        function filterProjects(cat, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.querySelectorAll('.project-card').forEach(card => {
+                if (cat === 'all' || card.dataset.category.includes(cat)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
