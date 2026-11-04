@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <style>
         :root {
             --bg-primary: #060913;
@@ -591,9 +593,9 @@
             </nav>
             <div class="nav-actions">
                 <button class="lang-btn" onclick="toggleLang()" id="langToggleBtn">EN / ES</button>
-                <a href="#contacto" class="btn btn-primary">
-                    <span data-lang="es">Contratar / Cotizar</span>
-                    <span data-lang="en">Hire Me / Contact</span>
+                <a href="https://calendly.com/jaramilloezequiel2114/30min" onclick="return openCalendly();" class="btn btn-primary">
+                    <span data-lang="es">Agendar Discovery Call</span>
+                    <span data-lang="en">Book Discovery Call</span>
                 </a>
             </div>
         </div>
@@ -621,7 +623,11 @@
                     </p>
 
                     <div class="hero-cta">
-                        <a href="mailto:jaramilloezequiel2114@gmail.com" class="btn btn-primary">
+                        <a href="https://calendly.com/jaramilloezequiel2114/30min" onclick="return openCalendly();" class="btn btn-primary">
+                            <span data-lang="es">Agendar Discovery Call (30 min)</span>
+                            <span data-lang="en">Book 30-Min Discovery Call</span>
+                        </a>
+                        <a href="mailto:jaramilloezequiel2114@gmail.com" class="btn btn-outline">
                             <span>jaramilloezequiel2114@gmail.com</span>
                         </a>
                         <a href="assets/cv/CV_Ezequiel_Jaramillo_AI_Data_Science_ES.pdf" target="_blank" class="btn btn-emerald">
@@ -1043,7 +1049,11 @@
                 </p>
 
                 <div class="contact-actions">
-                    <a href="mailto:jaramilloezequiel2114@gmail.com" class="btn btn-primary">
+                    <a href="https://calendly.com/jaramilloezequiel2114/30min" onclick="return openCalendly();" class="btn btn-primary">
+                        <span data-lang="es">Agendar Discovery Call (30 min)</span>
+                        <span data-lang="en">Book 30-Min Discovery Call</span>
+                    </a>
+                    <a href="mailto:jaramilloezequiel2114@gmail.com" class="btn btn-outline">
                         jaramilloezequiel2114@gmail.com
                     </a>
                     <a href="https://www.linkedin.com/in/ezequiel-jaramillo-454956227" target="_blank" class="btn btn-outline">
@@ -1056,6 +1066,8 @@
                         Download Resume (EN PDF)
                     </a>
                 </div>
+
+                <div class="calendly-inline-widget" data-url="https://calendly.com/jaramilloezequiel2114/30min?hide_gdpr_banner=1&amp;background_color=0d1326&amp;text_color=f8fafc&amp;primary_color=06b6d4" style="min-width:320px;height:680px;margin-top:32px;border-radius:16px;overflow:hidden;border:1px solid rgba(148,163,184,0.14);"></div>
             </div>
         </div>
     </section>
@@ -1068,6 +1080,15 @@
     </footer>
 
     <script>
+        function openCalendly() {
+            var url = 'https://calendly.com/jaramilloezequiel2114/30min?hide_gdpr_banner=1&background_color=0d1326&text_color=f8fafc&primary_color=06b6d4';
+            if (window.Calendly) {
+                Calendly.initPopupWidget({ url: url });
+            } else {
+                window.open('https://calendly.com/jaramilloezequiel2114/30min', '_blank');
+            }
+            return false;
+        }
         function toggleLang() {
             document.body.classList.toggle('lang-en');
         }
